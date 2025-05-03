@@ -1,19 +1,21 @@
 package com.parkinglot.parkingmanager;
 
+import com.parkinglot.model.VehicleType;
 import com.parkinglot.parkingspot.FourWheelerParkingSpot;
+import com.parkinglot.strategy.ParkAnyWhere;
 import com.parkinglot.strategy.ParkingStrategy;
 
 import java.util.List;
 
 public class FourWheelerParkingAreaManager extends ParkingAreaManager<FourWheelerParkingSpot>{
     public FourWheelerParkingAreaManager() {
-        super();
-        this.parkingStrategy = new ParkNearestToEntrance();
+        super(VehicleType.FourWheeler);
+        this.parkingStrategy = new ParkAnyWhere();
     }
 
     public FourWheelerParkingAreaManager(List<FourWheelerParkingSpot>  parkingSpots) {
-        super(parkingSpots);
-        this.parkingStrategy = new ParkNearestToEntrance();
+        super(VehicleType.FourWheeler,parkingSpots);
+        this.parkingStrategy = new ParkAnyWhere();
     }
 
     @Override

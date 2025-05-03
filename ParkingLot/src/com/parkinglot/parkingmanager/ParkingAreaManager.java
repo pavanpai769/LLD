@@ -1,5 +1,6 @@
 package com.parkinglot.parkingmanager;
 
+import com.parkinglot.model.VehicleType;
 import com.parkinglot.parkingspot.ParkingSpot;
 import com.parkinglot.strategy.ParkingStrategy;
 
@@ -7,14 +8,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class ParkingAreaManager<T extends ParkingSpot> {
+    protected final VehicleType vehicleType;
     protected final List<T> parkingSpots;
     protected ParkingStrategy parkingStrategy;
     
-    public ParkingAreaManager(List<T> parkingSpots) {
+    public ParkingAreaManager(VehicleType vehicleType,List<T> parkingSpots) {
+        this.vehicleType = vehicleType;
         this.parkingSpots = parkingSpots;
     }
     
-    public ParkingAreaManager() {
+    public ParkingAreaManager(VehicleType vehicleType) {
+        this.vehicleType = vehicleType;
         this.parkingSpots = new ArrayList<>();
     }
     
@@ -31,6 +35,10 @@ public abstract class ParkingAreaManager<T extends ParkingSpot> {
             throw new NullPointerException("Parking strategy is null, please set the strategy first.");
         }
         return this.parkingStrategy.findParkingSpot(this.parkingSpots);
+    }
+
+    public VehicleType getVehicleType() {
+        return this.vehicleType;
     }
 
     public abstract void setParkingStrategy(ParkingStrategy parkingStrategy);

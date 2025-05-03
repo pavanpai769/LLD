@@ -1,7 +1,7 @@
 package com.parkinglot.parkingmanager;
 
+import com.parkinglot.model.VehicleType;
 import com.parkinglot.parkingspot.TwoWheelerParkingSpot;
-import com.parkinglot.strategy.ParkAnyWhere;
 import com.parkinglot.strategy.ParkingStrategy;
 
 import java.util.List;
@@ -9,11 +9,11 @@ import java.util.List;
 public class TwoWheelerParkingAreaManager extends ParkingAreaManager<TwoWheelerParkingSpot> {
 
     public TwoWheelerParkingAreaManager(List<TwoWheelerParkingSpot> parkingSpots) {
-        super(parkingSpots);
+        super(VehicleType.TwoWheeler,parkingSpots);
     }
 
     public TwoWheelerParkingAreaManager() {
-        super();
+        super(VehicleType.TwoWheeler);
     }
 
     @Override
