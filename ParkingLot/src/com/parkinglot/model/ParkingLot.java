@@ -33,6 +33,7 @@ public class ParkingLot {
             if(entryGate == null){
                 throw new IllegalArgumentException("EntryGate is null");
             }
+            entryGate.setParkingAreaManagerFactory(this.parkingAreaManagerFactory);
             this.entryGates.add(entryGate);
         }
     }
@@ -41,6 +42,7 @@ public class ParkingLot {
         if(entryGate == null){
             throw new IllegalArgumentException("EntryGate is null");
         }
+        entryGate.setParkingAreaManagerFactory(this.parkingAreaManagerFactory);
         this.entryGates.add(entryGate);
     }
 

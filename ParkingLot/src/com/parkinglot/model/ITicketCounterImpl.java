@@ -1,11 +1,11 @@
 package com.parkinglot.model;
 
+import com.parkinglot.parkingspot.ParkingSpot;
+
 public class ITicketCounterImpl implements ITicketCounter {
-    int ticketCount =0;
     @Override
-    public Ticket generateTicket(){
+    public Ticket generateTicket(String vehicleNumber,String parkingSpotId){
         //you can write your custom logic to generate ticket here
-        ticketCount++;
-        return new Ticket(String.valueOf(ticketCount));
+        return new Ticket(vehicleNumber,parkingSpotId);
     }
 }

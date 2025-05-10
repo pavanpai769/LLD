@@ -1,9 +1,10 @@
 package com.parkinglot.strategy;
 
+import com.parkinglot.exceptions.ParkingSpotNotFoundException;
 import com.parkinglot.parkingspot.ParkingSpot;
 
 import java.util.List;
 
 public interface ParkingStrategy {
-    ParkingSpot findParkingSpot(List<? extends ParkingSpot> parkingSpots);
+    ParkingSpot findParkingSpot(List<? extends ParkingSpot> parkingSpots)throws ParkingSpotNotFoundException;
 }

@@ -6,7 +6,6 @@ import com.parkinglot.parkingmanager.FourWheelerParkingAreaManager;
 import com.parkinglot.parkingmanager.ParkingAreaManager;
 import com.parkinglot.parkingmanager.TwoWheelerParkingAreaManager;
 import com.parkinglot.parkingspot.FourWheelerParkingSpot;
-import com.parkinglot.parkingspot.ParkingSpot;
 import com.parkinglot.parkingspot.TwoWheelerParkingSpot;
 
 import java.util.ArrayList;
@@ -58,6 +57,10 @@ public class Main {
 
         parkingLot.addEntryGate(entry1);
         parkingLot.addEntryGate(entry2);
+
+        Vehicle car = new FourWheeler("KA47N2909");
+        Vehicle bike = new TwoWheeler("ka27E5678");
+
 
 
     }

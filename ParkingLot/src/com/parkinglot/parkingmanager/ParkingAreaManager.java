@@ -1,5 +1,6 @@
 package com.parkinglot.parkingmanager;
 
+import com.parkinglot.exceptions.ParkingSpotNotFoundException;
 import com.parkinglot.model.VehicleType;
 import com.parkinglot.parkingspot.ParkingSpot;
 import com.parkinglot.strategy.ParkingStrategy;
@@ -30,7 +31,7 @@ public abstract class ParkingAreaManager<T extends ParkingSpot> {
     
     public abstract boolean removeParkingSpot(T parkingSpot);
 
-    public ParkingSpot findParkingSpot() throws NullPointerException{
+    public ParkingSpot findParkingSpot() throws NullPointerException, ParkingSpotNotFoundException {
         if(parkingStrategy == null){
             throw new NullPointerException("Parking strategy is null, please set the strategy first.");
         }
