@@ -1,9 +1,9 @@
 package com.parkinglot.parkingmanager;
 
-import com.parkinglot.model.VehicleType;
+import com.parkinglot.model.vehicle.VehicleType;
 import com.parkinglot.parkingspot.FourWheelerParkingSpot;
-import com.parkinglot.strategy.ParkAnyWhere;
-import com.parkinglot.strategy.ParkingStrategy;
+import com.parkinglot.strategy.parking.ParkAnyWhere;
+import com.parkinglot.strategy.parking.ParkingStrategy;
 
 import java.util.List;
 

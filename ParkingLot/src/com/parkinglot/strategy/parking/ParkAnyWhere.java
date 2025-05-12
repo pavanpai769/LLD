@@ -1,4 +1,4 @@
-package com.parkinglot.strategy;
+package com.parkinglot.strategy.parking;
 
 import com.parkinglot.exceptions.ParkingSpotNotFoundException;
 import com.parkinglot.parkingspot.ParkingSpot;

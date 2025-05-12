@@ -1,9 +1,9 @@
 package com.parkinglot.parkingspot;
 
-import com.parkinglot.model.VehicleType;
+import com.parkinglot.model.vehicle.VehicleType;
 
 public class FourWheelerParkingSpot extends ParkingSpot {
-    public FourWheelerParkingSpot(String id,double price) {
-        super(id,false, VehicleType.FourWheeler,null,price);
+    public FourWheelerParkingSpot(String id) {
+        super(id, VehicleType.FourWheeler);
     }
 }

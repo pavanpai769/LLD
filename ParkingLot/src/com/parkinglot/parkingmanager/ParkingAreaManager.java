@@ -1,12 +1,13 @@
 package com.parkinglot.parkingmanager;
 
 import com.parkinglot.exceptions.ParkingSpotNotFoundException;
-import com.parkinglot.model.VehicleType;
+import com.parkinglot.model.vehicle.VehicleType;
 import com.parkinglot.parkingspot.ParkingSpot;
-import com.parkinglot.strategy.ParkingStrategy;
+import com.parkinglot.strategy.parking.ParkingStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public abstract class ParkingAreaManager<T extends ParkingSpot> {
     protected final VehicleType vehicleType;
@@ -43,4 +44,11 @@ public abstract class ParkingAreaManager<T extends ParkingSpot> {
     }
 
     public abstract void setParkingStrategy(ParkingStrategy parkingStrategy);
+
+    public T getParkingSpotWithSpotId(String parkingSpotId) throws NoSuchElementException {
+        return  this.parkingSpots
+                .stream()
+                .filter(parkingSpotInList -> parkingSpotInList.getId().equals(parkingSpotId))
+                .findFirst().orElseThrow(()->new NoSuchElementException("No parking spot with id " + parkingSpotId));
+    }
 }

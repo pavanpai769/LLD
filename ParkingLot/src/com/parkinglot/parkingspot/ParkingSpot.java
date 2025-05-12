@@ -1,28 +1,30 @@
 package com.parkinglot.parkingspot;
 
-import com.parkinglot.model.Vehicle;
-import com.parkinglot.model.VehicleType;
+import com.parkinglot.model.vehicle.Vehicle;
+import com.parkinglot.model.vehicle.VehicleType;
 
 public abstract class ParkingSpot {
     private final String id;
     private boolean isEmpty;
     private final VehicleType vehicleType;
     private Vehicle vehicle;
-    private final double price;
+    private double price;
 
-    public ParkingSpot(String id,boolean isEmpty,VehicleType vehicleType,Vehicle vehicle,double price){
+    public ParkingSpot(String id,VehicleType vehicleType){
         this.id=id;
-        this.isEmpty=isEmpty;
+        this.isEmpty=true;
         this.vehicleType=vehicleType;
-        this.vehicle=vehicle;
-        this.price=price;
     }
 
     public void park(Vehicle vehicle){
         this.vehicle=vehicle;
-        this.isEmpty= true;
+        this.isEmpty= false;
     }
 
+    public void unpark(){
+        this.vehicle= null;
+        this.isEmpty= true;
+    }
 
     public String getId() {
         return id;
@@ -32,9 +34,6 @@ public abstract class ParkingSpot {
         return isEmpty;
     }
 
-    public void setEmpty(boolean empty) {
-        isEmpty = empty;
-    }
 
     public VehicleType getVehicleType() {
         return vehicleType;
@@ -48,7 +47,4 @@ public abstract class ParkingSpot {
         this.vehicle = vehicle;
     }
 
-    public double getPrice() {
-        return price;
-    }
 }

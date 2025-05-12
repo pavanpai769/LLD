@@ -1,4 +1,4 @@
-package com.parkinglot.model;
+package com.parkinglot.model.vehicle;
 
 public class Vehicle {
     private final String id;

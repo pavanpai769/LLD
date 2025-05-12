@@ -1,6 +1,6 @@
 package com.parkinglot.factory;
 
-import com.parkinglot.model.VehicleType;
+import com.parkinglot.model.vehicle.VehicleType;
 import com.parkinglot.parkingmanager.ParkingAreaManager;
 
 import java.util.HashMap;
@@ -35,6 +35,5 @@ public class ParkingAreaManagerFactory {
         }
         parkingAreaManagers.put(vehicleType, parkingAreaManager);
     }
-
 
 }

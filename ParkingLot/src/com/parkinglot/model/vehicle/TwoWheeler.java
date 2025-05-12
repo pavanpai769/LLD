@@ -1,4 +1,4 @@
-package com.parkinglot.model;
+package com.parkinglot.model.vehicle;
 
 public class TwoWheeler extends Vehicle {
     public TwoWheeler(String id) {
