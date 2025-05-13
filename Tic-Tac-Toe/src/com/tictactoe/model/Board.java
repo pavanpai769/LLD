@@ -1,7 +1,8 @@
 package com.tictactoe.model;
 
+import com.tictactoe.model.piece.PlayingPiece;
+
 import java.util.Arrays;
-import java.util.Objects;
 
 public class Board {
     private PlayingPiece[][] grid;

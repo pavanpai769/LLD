@@ -1,4 +1,4 @@
-package com.tictactoe.model;
+package com.tictactoe.model.piece;
 
 public class Cross extends PlayingPiece{
 

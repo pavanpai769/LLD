@@ -1,4 +1,4 @@
-package com.tictactoe.model;
+package com.tictactoe.model.piece;
 
 public enum PlayingPiecesType {
     X,

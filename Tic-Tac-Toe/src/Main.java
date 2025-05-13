@@ -1,4 +1,6 @@
 import com.tictactoe.model.*;
+import com.tictactoe.model.piece.Cross;
+import com.tictactoe.model.piece.Nought;
 
 import java.util.Scanner;
 

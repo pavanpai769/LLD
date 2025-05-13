@@ -1,6 +1,6 @@
 package com.tictactoe.model;
 
-import javax.swing.text.Position;
+import com.tictactoe.model.piece.PlayingPiece;
 
 public class Player {
     private final String name;
